@@ -20,7 +20,7 @@ app.get('/hello', function(req, res){
 });
 
 
-app.post('/api/fileanalyse', multer({dests: /images/}).single('upfile') ,function(req,res){
+app.post('/api/fileanalyse', multer({dest: /images/}).single('upfile') ,function(req,res){
   res.json({
     "name": req.file.originalname,
     "type": req.file.mimetype,
